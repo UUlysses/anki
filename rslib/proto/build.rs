@@ -14,6 +14,8 @@ fn main() -> Result<()> {
 
     let pool = rust::write_rust_protos(descriptors_path)?;
     let (_, services) = get_services(&pool);
+    prost_build::Config::new()
+        .protoc_arg("--experimental_allow_proto3_optional");
     python::write_python_interface(&services)?;
     typescript::write_ts_interface(&services)?;
 
