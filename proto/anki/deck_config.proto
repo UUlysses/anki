@@ -150,10 +150,10 @@ message DeckConfigsForUpdate {
   }
   message CurrentDeck {
     message Limits {
-      optional uint32 review = 1;
-      optional uint32 new = 2;
-      optional uint32 review_today = 3;
-      optional uint32 new_today = 4;
+      uint32 review = 1;
+      uint32 new = 2;
+      uint32 review_today = 3;
+      uint32 new_today = 4;
       // Whether review_today applies to today or a past day.
       bool review_today_active = 5;
       // Whether new_today applies to today or a past day.

@@ -210,5 +210,5 @@ message RestoreNotetypeToStockRequest {
   NotetypeId notetype_id = 1;
   // Older notetypes did not store their original stock kind, so we allow the UI
   // to pass in an override to use when missing, or for tests.
-  optional StockNotetype.Kind force_kind = 2;
+  StockNotetype.Kind force_kind = 2;
 }

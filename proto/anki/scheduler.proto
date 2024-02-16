@@ -99,7 +99,7 @@ message SchedulingState {
   // The backend does not populate this field in GetQueuedCards; the front-end
   // is expected to populate it based on the provided Card. If it's not set when
   // answering a card, the existing custom data will not be updated.
-  optional string custom_data = 3;
+  string custom_data = 3;
 }
 
 message QueuedCards {
@@ -196,7 +196,7 @@ message ScheduleCardsAsNewRequest {
   bool log = 2;
   bool restore_position = 3;
   bool reset_counts = 4;
-  optional Context context = 5;
+  Context context = 5;
 }
 
 message ScheduleCardsAsNewDefaultsRequest {

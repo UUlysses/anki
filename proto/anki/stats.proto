@@ -38,10 +38,10 @@ message CardStatsResponse {
   string deck = 4;
   // Unix timestamps
   int64 added = 5;
-  optional int64 first_review = 6;
-  optional int64 latest_review = 7;
-  optional int64 due_date = 8;
-  optional int32 due_position = 9;
+  int64 first_review = 6;
+  int64 latest_review = 7;
+  int64 due_date = 8;
+  int32 due_position = 9;
   // days
   uint32 interval = 10;
   // per mill

@@ -102,7 +102,7 @@ message MediaEntries {
     /// Legacy media maps may include gaps in the media list, so the original
     /// file index is recorded when importing from a HashMap. This field is not
     /// set when exporting.
-    optional uint32 legacy_zip_filename = 255;
+    uint32 legacy_zip_filename = 255;
   }
 
   repeated MediaEntry entries = 1;
@@ -115,10 +115,10 @@ message ImportCsvRequest {
 
 message CsvMetadataRequest {
   string path = 1;
-  optional CsvMetadata.Delimiter delimiter = 2;
-  optional int64 notetype_id = 3;
-  optional int64 deck_id = 4;
-  optional bool is_html = 5;
+  CsvMetadata.Delimiter delimiter = 2;
+  int64 notetype_id = 3;
+  int64 deck_id = 4;
+  bool is_html = 5;
 }
 
 // Column indices are 1-based to make working with them in TS easier, where

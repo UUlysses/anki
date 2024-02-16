@@ -79,8 +79,8 @@ message Deck {
     uint32 extend_review = 3;
     string description = 4;
     bool markdown_description = 5;
-    optional uint32 review_limit = 6;
-    optional uint32 new_limit = 7;
+    uint32 review_limit = 6;
+    uint32 new_limit = 7;
     DayLimit review_limit_today = 8;
     DayLimit new_limit_today = 9;
 

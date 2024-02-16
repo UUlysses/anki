@@ -175,7 +175,7 @@ message AllTtsVoicesResponse {
     string id = 1;
     string name = 2;
     string language = 3;
-    optional bool available = 4;
+    bool available = 4;
   }
   repeated TtsVoice voices = 1;
 }
