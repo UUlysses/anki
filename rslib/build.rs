@@ -10,6 +10,8 @@ use anyhow::Result;
 use prost_reflect::DescriptorPool;
 
 fn main() -> Result<()> {
+    prost_build::Config::new()
+        .protoc_arg("--experimental_allow_proto3_optional");
     println!("cargo:rerun-if-changed=../out/buildhash");
     let buildhash = fs::read_to_string("../out/buildhash").unwrap_or_default();
     println!("cargo:rustc-env=BUILDHASH={buildhash}");

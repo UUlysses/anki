@@ -4,6 +4,8 @@
 use std::path::Path;
 
 fn main() {
+    prost_build::Config::new()
+        .protoc_arg("--experimental_allow_proto3_optional");
     // macOS needs special link flags for PyO3
     if cfg!(target_os = "macos") {
         println!("cargo:rustc-link-arg=-undefined");

@@ -22,6 +22,8 @@ use write_strings::write_strings;
 // fixme: check all variables are present in translations as well?
 
 fn main() -> Result<()> {
+    prost_build::Config::new()
+        .protoc_arg("--experimental_allow_proto3_optional");
     // generate our own requirements
     let map = get_ftl_data();
     check(&map);

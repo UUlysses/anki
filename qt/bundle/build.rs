@@ -43,6 +43,8 @@ fn build_with_pyoxidizer_exe(exe: Option<String>, resolve_target: Option<&str>) 
 
 #[allow(clippy::if_same_then_else)]
 fn main() {
+    prost_build::Config::new()
+        .protoc_arg("--experimental_allow_proto3_optional");
     if std::env::var("CARGO_FEATURE_BUILD_MODE_STANDALONE").is_ok() {
         let path = PathBuf::from(std::env::var("OUT_DIR").expect("OUT_DIR not defined"));
         let path = path.join(DEFAULT_PYTHON_CONFIG_FILENAME);
